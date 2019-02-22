@@ -6,7 +6,7 @@
 /*   By: kchong <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 16:24:28 by kchong            #+#    #+#             */
-/*   Updated: 2019/02/15 16:35:07 by kchong           ###   ########.fr       */
+/*   Updated: 2019/02/21 20:09:52 by kchong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	int		i;
 
-	sub = ft_strnew(len);
 	i = -1;
-	if (!sub)
+	if (!(sub = ft_strnew(len)))
 		return (NULL);
 	while (++i < (int)len)
 		sub[i] = s[start + i];

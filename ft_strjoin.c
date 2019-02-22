@@ -6,7 +6,7 @@
 /*   By: kchong <kchong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 16:36:08 by kchong            #+#    #+#             */
-/*   Updated: 2019/02/19 13:00:01 by kchong           ###   ########.fr       */
+/*   Updated: 2019/02/21 20:11:57 by kchong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	join = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
-	if (!join)
+	if (!(join = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
 	i = -1;
 	j = -1;

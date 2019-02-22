@@ -6,7 +6,7 @@
 /*   By: kchong <kchong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 20:30:27 by kchong            #+#    #+#             */
-/*   Updated: 2019/02/20 20:48:12 by kchong           ###   ########.fr       */
+/*   Updated: 2019/02/21 19:34:25 by kchong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*new;
+	t_list	*map;
 	t_list	*temp;
 
 	temp = f(lst);
-	new = temp;
+	map = temp;
 	while (lst->next)
 	{
 		lst = lst->next;
@@ -29,5 +29,5 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		}
 		temp = temp->next;
 	}
-	return (new);
+	return (map);
 }
